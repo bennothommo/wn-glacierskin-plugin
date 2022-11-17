@@ -1,0 +1,8 @@
+{
+    "name": "bennothommo-glacierskin",
+    "private": true,
+    "devDependencies": {
+        "less": "^4.1.3",
+        "less-loader": "^11.1.0"
+    }
+}
