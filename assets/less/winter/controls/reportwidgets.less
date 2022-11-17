@@ -1,5 +1,5 @@
 .report-widget {
-    padding: 20px 30px;
+    padding: 20px 30px 30px;
     background: white;
     .box-sizing(border-box);
     .border-radius(@border-radius-large);
@@ -7,14 +7,11 @@
     box-shadow: @widget-box-shadow;
 
     h3 {
-        font-family: @heading-family-base;
-        font-size: @font-size-medium;
-        font-weight: 500;
+        .header-font(@font-size-medium, 500);
         color: @color-report-widget-title;
         text-transform: uppercase;
-        font-weight: 600;
         margin-top: 0;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .height-100 { height: 100px; }

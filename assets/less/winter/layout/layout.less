@@ -76,9 +76,27 @@ body {
     flex-grow: 1;
     flex-shrink: 0;
 
-    .layout-cell() {
+    &.gapped {
+        gap: @padding-standard;
+    }
+
+    .layout-relative {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    .layout-absolute {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .layout-cell {
         display: block;
         height: 100%;
+        flex-grow: 1;
+        flex-shrink: 0;
 
         &.layout-container, .layout-container, &.padded-container, .padded-container {
             padding: @padding-standard @padding-standard 0 @padding-standard;
@@ -89,19 +107,9 @@ body {
             }
         }
 
-        .layout-relative {
-            position: relative;
-            height: 100%;
-        }
-
-        .layout-absolute {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-        }
-
         &.min-size {
-            width: 0;
+            flex-grow: 0;
+            flex-shrink: 1;
         }
 
         &.min-height {
@@ -119,7 +127,7 @@ body {
 
     > .layout-row {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-grow: 1;
         flex-shrink: 0;
 
@@ -129,22 +137,17 @@ body {
             > .layout-cell {
                 flex-grow: 1;
                 flex-shrink: 0;
-                .layout-cell();
             }
-        }
-
-        > .layout-cell {
-            .layout-cell();
         }
 
         &.min-size {
             flex-grow: 0;
             flex-shrink: 1;
         }
-    }
 
-    > .layout-cell {
-        .layout-cell();
+        &.gapped {
+            gap: @padding-standard;
+        }
     }
 }
 
