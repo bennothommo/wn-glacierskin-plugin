@@ -82,6 +82,11 @@ class Plugin extends PluginBase
         });
     }
 
+    /**
+     * Adds Glacier overrides for backend controller views and widget partials.
+     *
+     * @return void
+     */
     protected function addSkinViews()
     {
         BaseBackendController::extend(function ($controller) {
