@@ -1,17 +1,24 @@
 // STANDARD TAB STYLING
 @tab-nav-font-size: 14px;
-@tab-fg: #bbbbbb;
-@tab-active-fg: @color-text-title;
 @tab-spacing: @padding-small-horizontal;
 @tab-padding: @padding-small-vertical @padding-small-horizontal;
 
+@tab-fg: #bbbbbb;
+@tab-active-fg: @color-text-title;
+
+// STANDARD TAB PANE STYLING
 @tab-pane-padding: 40px @padding-standard @padding-standard;
 @tab-pane-bg: #fff;
 
 // PRIMARY TAB STYLING
-@primary-tabs-bg:                             #dfe7eb;
-@primary-tabs-active-bg:                      #fff;
-@primary-tabs-active-fg:                      @brand-primary;
+@primary-tab-spacing: 20px;
+@primary-tab-padding: @padding-base-vertical @padding-base-horizontal;
+@primary-tab-bg:                             @gray-lighter;
+@primary-tab-fg:                             @gray-light;
+@primary-tab-hover-bg:                       darken(@primary-tab-bg, 5%);
+@primary-tab-hover-fg:                       darken(@primary-tab-fg, 8%);
+@primary-tab-active-bg:                      #fff;
+@primary-tab-active-fg:                      @brand-primary;
 
 @color-scroll-indicator:                      #bbbbbb;
 

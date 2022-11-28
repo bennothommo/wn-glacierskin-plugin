@@ -114,16 +114,17 @@
 
 @color-text-title:       #405261;
 @color-text-description: #8f8f8f;
+@color-gray:             #11181b;
 
 @color-focus:            @brand-primary;
 @color-border:           #b1dbef;
 @color-border-light:     #ddf0f8;
 
-@gray-darker:            lighten(#000, 13.5%); // #222
-@gray-dark:              lighten(#000, 20%);   // #333
-@gray:                   lighten(#000, 33.5%); // #555
-@gray-light:             lighten(#000, 60%);   // #999
-@gray-lighter:           lighten(#000, 93.5%); // #eee
+@gray-darker:            lighten(@color-gray, 10%); // #222
+@gray-dark:              lighten(@color-gray, 18%);   // #333
+@gray:                   lighten(@color-gray, 33%); // #555
+@gray-light:             lighten(@color-gray, 55%);   // #999
+@gray-lighter:           lighten(@color-gray, 78%); // #eee
 
 @state-success-text:     #3c763d;
 @state-success-bg:       #dff0d8;

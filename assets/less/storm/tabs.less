@@ -42,12 +42,14 @@
             }
 
             a {
+                position: relative;
                 border: none;
                 padding: @tab-padding;
                 color: @tab-fg;
                 font-weight: 400;
                 outline: none;
                 overflow: hidden;
+                border-radius: 0;
 
                 &:hover,
                 &:focus {
@@ -85,19 +87,79 @@
     }
 
     // PRIMARY TABS
-    // &.primary-tabs {
-    //     > ul.nav-tabs,
-    //     > div > ul.nav-tabs,
-    //     > div > div > ul.nav-tabs {
-    //         padding: 0 @padding-standard;
-    //         margin-left: 0;
-    //         margin-right: 0;
+    &.primary-tabs {
+        > ul.nav-tabs,
+        > div > ul.nav-tabs,
+        > div > div > ul.nav-tabs {
+            padding: 0 (@padding-standard + 10px);
+            margin-left: 0;
+            margin-right: 0;
 
-    //         > li {
-    //             margin-right: -3px;
-    //         }
-    //     }
-    // }
+            > li {
+                margin-right: @primary-tab-spacing;
+
+                a {
+                    padding: @primary-tab-padding;
+                    background: @primary-tab-bg;
+                    color: @primary-tab-fg;
+                }
+
+                &:hover {
+                    z-index: @zindex-tab + 1;
+
+                    &::before,
+                    &::after {
+                        background: @primary-tab-hover-bg;
+                    }
+
+                    a {
+                        background: @primary-tab-hover-bg !important;
+                        color: @primary-tab-hover-fg !important;
+                    }
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    background: @primary-tab-bg;
+                    top: 0;
+                    z-index: -1;
+                    width: 15px;
+                    height: 100%;
+                    transform-origin: bottom;
+                }
+
+                &::before {
+                    left: -13px;
+                    .border-radius(8px 0 0 0);
+                    .transform( ~'skewX(-12deg)');
+                }
+
+                &::after {
+                    right: -13px;
+                    .border-radius(0 8px 0 0);
+                    .transform( ~'skewX(12deg)');
+                }
+
+                &.active {
+                    z-index: @zindex-tab + 2;
+
+                    &::before,
+                    &::after {
+                        background: @primary-tab-active-bg;
+                    }
+
+                    a,
+                    a:hover {
+                        background: @primary-tab-active-bg !important;
+                        color: @primary-tab-active-fg !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // ----- TAB CONTENT
