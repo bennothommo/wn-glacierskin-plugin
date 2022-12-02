@@ -1,0 +1,63 @@
+// Progress Bar
+// -------------------------
+
+// Outer container
+.progress {
+    overflow: hidden;
+    height: 9px;
+    margin-bottom: @line-height-computed;
+    background-color: @progress-bg;
+    .border-radius(@border-radius-base);
+}
+
+// Bar of progress
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: @font-size-small;
+    line-height: 9px;
+    color: @progress-bar-color;
+    text-align: center;
+    background-color: @progress-bar-bg;
+    .transition(width .6s ease);
+}
+
+// Call animation for the active one
+.progress.active .progress-bar {
+    .animation(progress-bar-stripes 2s linear infinite);
+}
+
+// Variations
+// -------------------------
+
+.progress-bar-success {
+    background-color: @progress-bar-success-bg;
+}
+
+.progress-bar-info {
+    background-color: @progress-bar-info-bg;
+}
+
+.progress-bar-warning {
+    background-color: @progress-bar-warning-bg;
+}
+
+.progress-bar-danger {
+    background-color: @progress-bar-danger-bg;
+}
+
+// Bar animations
+// -------------------------
+
+// WebKit
+@-webkit-keyframes progress-bar-stripes {
+    from  { background-position: 40px 0; }
+    to    { background-position: 0 0; }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-stripes {
+    from  { background-position: 40px 0; }
+    to    { background-position: 0 0; }
+}
