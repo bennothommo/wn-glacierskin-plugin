@@ -2,15 +2,15 @@
 @import "../../../../../../modules/system/assets/ui/less/list.base.less";
 
 table.table.data {
-    border: 1px solid @table-border-color;
-    border-radius: @border-radius-base;
+    border: 1px solid @table-color-border;
+    border-radius: @table-border-radius;
+    border-spacing: 0;
 
     thead {
-        background: @color-list-head-bg;
-
         td, th {
             border: none;
-            background: @color-list-head-bg;
+            background: @table-color-header-bg;
+            color: @table-color-header-fg;
             border-bottom: 1px solid @table-border-color;
         }
     }
@@ -24,7 +24,15 @@ table.table.data {
 
         tr {
             td, th {
-                // background:
+                background: @table-color-cell-bg;
+                color: @table-color-cell-fg;
+                border-top-color: @table-color-cell-border;
+            }
+        }
+
+        tr:nth-child(2n) {
+            td, th {
+                background: @table-color-cell-alt-bg;
             }
         }
     }

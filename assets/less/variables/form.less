@@ -3,15 +3,16 @@
 // Forms
 // --------------------------------------------------
 
-@input-bg:                       #fff;
+@input-bg:                       @body-bg;
+@input-bg-focus:                 @color-border-light;
 @input-bg-disabled:              @gray-lighter;
 
 @input-color:                    #385487;
-@input-border:                   #d1d6d9;
-@input-border-focus:             @input-border;
+@input-border:                   transparent;
+@input-border-focus:             @brand-primary-lighter;
 @input-border-radius:            3px;
 @input-border-fade:              fade(@input-border, 25%);
-@input-box-shadow:               ~"inset 0 1px 0 @{input-border-fade}, 0 1px 0 rgba(255,255,255,.5)";
+@input-box-shadow:               none;
 
 @input-color-placeholder:        #cccccc;
 @input-color-disabled:           #999999;

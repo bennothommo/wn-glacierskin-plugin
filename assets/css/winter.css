@@ -4546,7 +4546,7 @@ body.breadcrumb-fancy .control-breadcrumb li:last-child:before,
 }
 .fancy-layout *:not(.nested-form) > .form-widget > .layout-row > .control-tabs > .tab-content > .tab-pane > .form-group > .field-richeditor {
   border: none;
-  border-left: 1px solid #d1d6d9 !important;
+  border-left: 1px solid transparent !important;
 }
 .fancy-layout *:not(.nested-form) > .form-widget > .layout-row > .control-tabs > .tab-content > .tab-pane > .form-group > .field-richeditor,
 .fancy-layout *:not(.nested-form) > .form-widget > .layout-row > .control-tabs > .tab-content > .tab-pane > .form-group > .field-richeditor .fr-toolbar,

@@ -19,6 +19,11 @@ class Plugin extends PluginBase
     /**
      * {@inheritDoc}
      */
+    public $elevated = true;
+
+    /**
+     * {@inheritDoc}
+     */
     public function pluginDetails(): array
     {
         return [
