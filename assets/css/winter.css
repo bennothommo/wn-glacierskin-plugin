@@ -456,7 +456,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 }
 .sweet-alert {
   text-align: right;
-  border-radius: 6px;
+  border-radius: 4px;
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
   z-index: 10500;
 }
@@ -483,7 +483,7 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   padding: 20px 20px 2px 20px;
   margin-bottom: 20px;
   background: #FFFFFF;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .control-simplelist ul {
   padding-left: 15px;
@@ -762,7 +762,7 @@ html.mobile .control-scrollbar {
   font-size: 14px;
   text-align: center;
   font-weight: normal;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .control-filelist ul {
   padding: 0;
@@ -1232,7 +1232,7 @@ html.mobile .control-scrollbar {
   padding: 20px 30px 30px;
   background: white;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 13px;
   box-shadow: 0 30px 25px -25px rgba(16, 49, 65, 0.2);
 }
@@ -3094,7 +3094,7 @@ nav#layout-mainmenu ul li .mainmenu-accountmenu {
   z-index: 600;
   display: none;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-  border-radius: 6px;
+  border-radius: 4px;
 }
 nav#layout-mainmenu ul li .mainmenu-accountmenu.active {
   display: block;

@@ -12,6 +12,40 @@ table.table.data {
             background: @table-color-header-bg;
             color: @table-color-header-fg;
             border-bottom: 1px solid @table-border-color;
+            font-weight: normal;
+            text-transform: uppercase;
+            font-size: @table-font-size-header;
+            white-space: nowrap;
+            padding: 0;
+
+            > a, > span {
+                display: block;
+                padding: @table-cell-padding;
+                color: @table-color-header-fg;
+                text-decoration: none;
+
+                &:hover {
+                    color: @table-color-header-hover-fg;
+                }
+            }
+
+            &.active > a,
+            &.active > span {
+                color: @table-color-header-active-fg;
+            }
+
+            &.sort-desc {
+                &:hover,
+                &.active {
+                    .list-head-icon(@angle-down);
+                }
+            }
+            &.sort-asc {
+                &:hover,
+                &.active {
+                    .list-head-icon(@angle-down);
+                }
+            }
         }
     }
 
@@ -27,6 +61,7 @@ table.table.data {
                 background: @table-color-cell-bg;
                 color: @table-color-cell-fg;
                 border-top-color: @table-color-cell-border;
+                font-size: @table-font-size-cell;
             }
         }
 
@@ -35,6 +70,10 @@ table.table.data {
                 background: @table-color-cell-alt-bg;
             }
         }
+    }
+
+    &.no-offset-bottom {
+        margin-bottom: 0 !important;
     }
 }
 
