@@ -59,8 +59,9 @@
 
 .form-control {
     position: relative;
-    -webkit-appearance: none;
     border: 1px solid @input-border;
+    transition: none;
+    padding: 12px 20px;
     .box-shadow(@input-box-shadow);
 
     &:focus {
@@ -103,8 +104,20 @@
     }
 }
 
+.tab-content .form-control {
+    background: @tab-input-bg;
+
+    &:focus {
+        background-color: @input-bg-focus;
+    }
+}
+
 .form-group {
     position: relative;
+
+    label {
+        font-weight: 500;
+    }
 
     &:empty {
         display: none;
@@ -122,10 +135,9 @@
         > .custom-checkbox > label:after,
         > .field-switch > label:after {
             background-color: @color-form-required-asterisk;
-            width: 5px;
-            height: 5px;
+            width: 8px;
+            height: 8px;
             margin-left: 3px;
-            vertical-align: super;
             font-size: 60%;
             content: "";
             display: inline-block;
