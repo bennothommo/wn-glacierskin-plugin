@@ -81,6 +81,10 @@ body {
         gap: @padding-standard;
     }
 
+    &.responsive-sidebar {
+        flex-direction: row;
+    }
+
     .layout-relative {
         position: relative;
         height: 100%;
@@ -123,6 +127,10 @@ body {
         &.middle {
             justify-content: center;
         }
+
+        &.form-sidebar {
+            flex-grow: 0;
+        }
     }
 
     > .layout-row {
@@ -130,6 +138,11 @@ body {
         flex-direction: row;
         flex-grow: 1;
         flex-shrink: 1;
+        flex-wrap: wrap;
+
+        > .layout-row {
+            width: 100%;
+        }
 
         > * {
             width: 100%;
