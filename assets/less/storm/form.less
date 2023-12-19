@@ -61,7 +61,7 @@
     position: relative;
     border: 1px solid @input-border;
     transition: none;
-    padding: 12px 20px;
+    padding: 12px 16px;
     .box-shadow(@input-box-shadow);
 
     &:focus {
@@ -249,10 +249,16 @@
 .help-block {
     font-size: @font-size-base - 1;
     margin-bottom: 0;
+    color: @gray-light;
+
     &.before-field {
-        margin-top: 0;
-        margin-bottom: 17px;
+        margin-top: -4px;
+        margin-bottom: 20px;
     }
+}
+
+label + .help-block, label + .help-block.before-field {
+    margin-top: -4px;
 }
 
 .input-with-icon {
