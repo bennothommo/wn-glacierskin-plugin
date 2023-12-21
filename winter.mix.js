@@ -3,9 +3,9 @@ mix.setPublicPath(__dirname);
 
 mix
     // Base LESS files
-    .less('assets/less/storm.less', 'assets/css/storm.css')
-    .less('assets/less/icons.less', 'assets/css/icons.css')
-    .less('assets/less/winter.less', 'assets/css/winter.css')
+    .less('assets/less/storm.less', 'skins/glacier/modules/backend/assets/css/storm.css')
+    .less('assets/less/icons.less', 'skins/glacier/modules/backend/assets/css/icons.css')
+    .less('assets/less/winter.less', 'skins/glacier/modules/backend/assets/css/winter.css')
 
     // Backend widgets
     .less(
